@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bgColorPrimary"
+    android:layout_marginBottom="@dimen/dp_8"
+    android:orientation="vertical"
+    android:elevation="1dp"
+    android:paddingStart="@dimen/dp_16"
+    android:paddingTop="@dimen/dp_16"
+    android:paddingBottom="@dimen/dp_8"
+    android:paddingEnd="@dimen/dp_16">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/textColorSecondary"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="@dimen/sp_14"
+        tools:text="移动开发" />
+
+    <com.zhy.view.flowlayout.TagFlowLayout
+        android:id="@+id/tagFlawLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_16"
+        app:max_select="1" />
+
+</LinearLayout>

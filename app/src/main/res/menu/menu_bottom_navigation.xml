@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--    底部导航图片item-->
+
+    <item
+        android:id="@+id/home"
+        android:icon="@mipmap/home_icon"
+        android:title="@string/home" />
+
+    <item
+        android:id="@+id/system"
+        android:icon="@mipmap/system_icon"
+        android:title="@string/system" />
+
+    <item
+        android:id="@+id/discovery"
+        android:icon="@mipmap/find_icon"
+        android:title="@string/discovery" />
+
+    <item
+        android:id="@+id/navigation"
+        android:icon="@mipmap/navigation_icon"
+        android:title="@string/navigation" />
+    <item
+        android:id="@+id/mine"
+        android:icon="@mipmap/mine_icon"
+        android:title="@string/mine" />
+
+</menu>

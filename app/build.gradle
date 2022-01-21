@@ -1,0 +1,91 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
+}
+
+android {
+    compileSdkVersion rootProject.compileSdkVersion
+    buildToolsVersion rootProject.buildToolsVersion
+
+    defaultConfig {
+        applicationId "com.android.blogandroid"
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion rootProject.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$rootProject.kotlinVersion"
+    implementation "androidx.core:core-ktx:$rootProject.coreVersion"
+
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:$rootProject.coroutinesVersion")
+    implementation("androidx.lifecycle:lifecycle-process:$rootProject.lifecycleVersion")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:$rootProject.lifecycleVersion")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$rootProject.lifecycleVersion")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:$rootProject.lifecycleVersion")
+    implementation("androidx.constraintlayout:constraintlayout:$rootProject.constraintLayoutVersion")
+
+
+
+    implementation("com.squareup.okhttp3:okhttp:$rootProject.okHttpVersion")
+    implementation("com.squareup.okhttp3:logging-interceptor:$rootProject.okHttpVersion")
+    implementation("com.squareup.retrofit2:retrofit:$rootProject.retrofitVersion")
+    implementation("com.squareup.retrofit2:converter-moshi:$rootProject.retrofitVersion")
+
+    implementation("com.squareup.moshi:moshi:$rootProject.moshiVersion")
+    implementation("com.squareup.moshi:moshi-kotlin:$rootProject.moshiVersion")
+
+    //cookie
+    implementation("com.github.franmontiel:PersistentCookieJar:$rootProject.PersistentCookieJarVersion")
+
+    //room
+    implementation("androidx.room:room-runtime:$rootProject.roomVersion")
+    implementation("androidx.room:room-ktx:$rootProject.roomVersion")
+    kapt("androidx.room:room-compiler:$rootProject.roomVersion")
+
+    //图片加载库
+    implementation("io.coil-kt:coil:$rootProject.coilVersion")
+    implementation("io.coil-kt:coil-gif:$rootProject.coilVersion")
+    implementation("io.coil-kt:coil-svg:$rootProject.coilVersion")
+    implementation("io.coil-kt:coil-video:$rootProject.coilVersion")
+
+    //下拉加载
+    implementation("androidx.coordinatorlayout:coordinatorlayout:$rootProject.coordinatorLayoutVersion")
+    implementation("androidx.swiperefreshlayout:swiperefreshlayout:$rootProject.swipeRefreshLayoutVersion")
+    implementation("androidx.recyclerview:recyclerview:$rootProject.recyclerViewVersion")
+    implementation("com.github.CymChad:BaseRecyclerViewAdapterHelper:$rootProject.brvhaVersion")
+
+    implementation("com.hyman:flowlayout-lib:$rootProject.flowLayoutVersion")
+    implementation("com.just.agentweb:agentweb:$rootProject.agentWebVersion")
+    implementation("com.jeremyliao:live-event-bus-x:$rootProject.liveEventBusVersion")
+    implementation("com.youth.banner:banner:$rootProject.bannerVersion")
+
+
+
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+}
